@@ -5,7 +5,8 @@ import lombok.*;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
-import java.util.List;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.Objects;
 
 @Entity
@@ -17,10 +18,9 @@ import java.util.Objects;
 public class BookCategory extends DateAudit {
 
     @Column
+    @NotBlank(message = "Category cannot be empty")
+    @Size(min = 2, message = "Category name cannot be less than 3 characters")
     private String category;
-
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Book> books;
 
     @Override
     public boolean equals(Object o) {

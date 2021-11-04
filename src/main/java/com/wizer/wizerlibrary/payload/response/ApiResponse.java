@@ -33,21 +33,8 @@ public class ApiResponse implements Serializable {
 	public ApiResponse(Boolean success, String message) {
 		this.success = success;
 		this.message = message;
+
 	}
-//	public ApiResponse(List<GameCategory> data, String message, HttpStatus status) {
-//		this.status = status;
-//		this.message = message;
-//		this.data = (List<GameCategory>) data;
-//	}
-//
-//	public ApiResponse(List<GameTransactions> data) {
-//		this.data = (List<GameTransactions>) data;
-//
-//	}
-//	public ApiResponse(List<Game> data, HttpStatus status) {
-//		this.status = status;
-//		this.data = (List<Game>) data;
-//	}
 
 
 }

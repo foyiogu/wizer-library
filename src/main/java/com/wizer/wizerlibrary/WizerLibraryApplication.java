@@ -12,4 +12,5 @@ public class WizerLibraryApplication {
 		SpringApplication.run(WizerLibraryApplication.class, args);
 	}
 
+
 }

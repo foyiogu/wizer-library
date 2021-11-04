@@ -22,11 +22,13 @@ import java.util.Date;
 public abstract class DateAudit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private Long id;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_at")
     @CreatedDate
+    @JsonIgnore
     private Date createdAt;
 
     @Column(name = "updated_at")
