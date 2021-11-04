@@ -5,6 +5,7 @@ import com.wizer.wizerlibrary.payload.request.BookRequest;
 import com.wizer.wizerlibrary.service.BookCategoryService;
 import com.wizer.wizerlibrary.service.BookService;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -13,8 +14,11 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-@Slf4j
 @RestController
+@ApiResponses(value = {
+        @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "400", description = "This is a bad request, please follow the API documentation for the proper request format."),
+        @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "500", description = "The server is down, please make sure that the Application is running")
+})
 @AllArgsConstructor
 @RequestMapping("api/v1/book-category")
 public class BookCategoryController {

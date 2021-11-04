@@ -51,8 +51,6 @@ docker compose up
 
 For ease of use and to test the functionality, I have made documents of the endpoints here 
 
-### Full PostMan documentation can be found [here](https://documenter.getpostman.com/view/15910567/Tzz7PHri)
-
-After running the Application, You can also see the documentation on swagger and test the end points
+After running the Application, You can see the documentation on swagger and test the end points
 
 ### Full Swagger documentation can be found [here](http://localhost:8080/swagger-ui/)

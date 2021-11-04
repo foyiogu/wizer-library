@@ -14,8 +14,7 @@ import javax.validation.Valid;
 @RestController
 @ApiResponses(value = {
         @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "400", description = "This is a bad request, please follow the API documentation for the proper request format."),
-        @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "401", description = "Due to security constraint, your access request cannot be authorized"),
-        @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "500", description = "The server is down, please make sure that the AgeRange Service is running")
+        @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "500", description = "The server is down, please make sure that the Application is running")
 })
 @AllArgsConstructor
 @RequestMapping("api/v1/books")
