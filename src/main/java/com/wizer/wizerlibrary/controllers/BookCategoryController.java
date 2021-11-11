@@ -10,6 +10,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -28,6 +29,7 @@ public class BookCategoryController {
 
     @PostMapping("/add-category")
     @ApiOperation(value = "Adds a new category")
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<?> addCategory(@Valid @RequestBody BookCategory bookCategory) {
         return new ResponseEntity<>(bookCategoryService.addCategory(bookCategory), HttpStatus.CREATED);
     }
